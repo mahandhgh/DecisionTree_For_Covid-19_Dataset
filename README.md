@@ -2,8 +2,7 @@
 
 A modular implementation of the **Decision Tree classification homework** using the COVID-19 dataset.
 
-The project is organized so that data preparation, the custom Decision Tree, evaluation, the scikit-learn implementation, and visualization are separated into independent Python modules. The original notebook workflow is preserved in `main_modular.ipynb`.
-
+The project is organized so that data preparation, the custom Decision Tree, evaluation, the scikit-learn implementation, and visualization are separated into independent Python modules.
 ---
 
 ## 1. Project Overview
@@ -28,16 +27,15 @@ The project also contains a visualization module for displaying the custom Decis
 ## 2. Project Structure
 
 ```text
-HW01_DecisionTree/
+DecisionTree_Covid_Dataset/
 │
 ├── Covid Data.csv
 ├── main.py
-├── main_modular.ipynb
 ├── requirements.txt
 ├── README.md
 │
 └── src/
-    ├── __init__.py
+    |
     ├── data_preprocessing.py
     ├── custom_decision_tree.py
     ├── evaluation.py
@@ -50,7 +48,6 @@ HW01_DecisionTree/
 | File | Responsibility |
 |---|---|
 | `main.py` | Runs the complete project from start to finish |
-| `main_modular.ipynb` | Notebook version of the same modular workflow |
 | `data_preprocessing.py` | Loads and preprocesses the COVID-19 dataset |
 | `custom_decision_tree.py` | Contains the custom Gini-based Decision Tree |
 | `evaluation.py` | Contains the manual train/test split and F1 calculations |
@@ -62,6 +59,14 @@ HW01_DecisionTree/
 ---
 
 ## 3. Dataset
+
+The project uses the COVID-19 dataset provided by Kaggle.
+
+### Dataset source
+
+The dataset is available on Kaggle:
+
+[COVID-19 Dataset — Kaggle](https://www.kaggle.com/datasets/meirnizri/covid19-dataset)
 
 The project expects a file named:
 
@@ -318,37 +323,7 @@ The program will:
 
 ---
 
-## 9. Running the Notebook
-
-Open:
-
-```text
-main_modular.ipynb
-```
-
-in Jupyter Notebook, JupyterLab, or VS Code.
-
-Run the cells in order.
-
-The notebook intentionally keeps the assignment's presentation flow:
-
-```text
-Imports
-   ↓
-Step 1 — Dataset preprocessing
-   ↓
-Step 2 — Custom Decision Tree and F1 score
-   ↓
-Step 3 — Scikit-learn Decision Tree
-   ↓
-Decision Tree visualization
-```
-
-The notebook imports the implementation from `src/` instead of defining the functions and classes directly inside notebook cells.
-
----
-
-## 10. Reproducibility
+## 9. Reproducibility
 
 The project uses fixed random seeds where randomness is involved.
 
@@ -365,7 +340,7 @@ Using the same dataset and environment should therefore produce reproducible res
 
 ---
 
-## 11. Custom vs. Scikit-learn Implementation
+## 10. Custom vs. Scikit-learn Implementation
 
 The two implementations are intentionally kept separate.
 
@@ -384,7 +359,7 @@ Because the train/test split procedures are not identical, the numerical results
 
 ---
 
-## 12. Dependencies
+## 11. Dependencies
 
 The project requires:
 
@@ -402,9 +377,8 @@ requirements.txt
 
 ---
 
-## 13. Notes
+## 12. Notes
 
 - Keep `Covid Data.csv` in the project root unless the dataset path is changed in `main.py` or the notebook.
 - Run the project from the project root so that imports such as `from src...` work correctly.
-- `src/__init__.py` marks `src` as the project's Python package.
 - The modular structure separates responsibilities without changing the intended assignment workflow.
