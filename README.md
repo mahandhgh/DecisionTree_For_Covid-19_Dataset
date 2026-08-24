@@ -278,7 +278,7 @@ Covid Data.csv
 in the project root:
 
 ```text
-HW01_DecisionTree/
+DecisionTree_Covid_Dataset/
 ├── Covid Data.csv
 ├── main.py
 └── src/
